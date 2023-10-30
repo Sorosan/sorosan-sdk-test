@@ -1,8 +1,6 @@
 "use client"
 
-import { useEffect } from 'react';
 import { useSorosanSDK } from '@/components/shared/sorosan-provider';
-import { Button } from '@/components/ui/button';
 import { Assert } from '@/lib/assert';
 import { TestAttributes, TestStatusType, TestTemplate } from '@/components/test/test-template';
 

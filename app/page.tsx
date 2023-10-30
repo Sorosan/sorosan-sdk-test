@@ -64,42 +64,42 @@ export default function Home() {
 
   const BasicTests = () => {
     return [
-      <TestCorrectNetwork status={setTestData} />,
-      <InvokeCallContractWithoutArgs status={setTestData} />,
-      <InvokeCallContractWithArgs status={setTestData} />,
-      <InvokeCallContractMismatchArgs status={setTestData} />,
-      <InvokeSendContractWithoutArgs status={setTestData} />,
-      <InvokeSendContractWithArgs status={setTestData} />,
-      <InvokeSendContractMismatchArgs status={setTestData} />,
-      <InvokeCallContractWithInvalidMethod status={setTestData} />,
-      <InvokeSendContractWithInvalidMethod status={setTestData} />,
-    ]
+      <TestCorrectNetwork key="test-correct-network" status={setTestData} />,
+      <InvokeCallContractWithoutArgs key="invoke-call-contract-without-args" status={setTestData} />,
+      <InvokeCallContractWithArgs key="invoke-call-contract-with-args" status={setTestData} />,
+      <InvokeCallContractMismatchArgs key="invoke-call-contract-mismatch-args" status={setTestData} />,
+      <InvokeSendContractWithoutArgs key="invoke-send-contract-without-args" status={setTestData} />,
+      <InvokeSendContractWithArgs key="invoke-send-contract-with-args" status={setTestData} />,
+      <InvokeSendContractMismatchArgs key="invoke-send-contract-mismatch-args" status={setTestData} />,
+      <InvokeCallContractWithInvalidMethod key="invoke-call-contract-with-invalid-method" status={setTestData} />,
+      <InvokeSendContractWithInvalidMethod key="invoke-send-contract-with-invalid-method" status={setTestData} />,
+    ];
   }
 
   const ContractTests = () => {
     return [
-      <DeployEmptyWasm status={setTestData} />,
-      <DeployInvalidWasm status={setTestData} />,
-      <DeployContractWasm status={setTestData} />,
-      <DeployWasmWithUserCancelWasm status={setTestData} />,
-      <DeployContractWasmWithInvalidPublicKey status={setTestData} />,
-      <DeployContract status={setTestData} />,
-      <DeployContractInvalidWasm status={setTestData} />,
-      <DeployContractEmptyPublicKey status={setTestData} />,
-      <DeployContractEmptyWasm status={setTestData} />,
-      <GetContractData status={setTestData} />,
-      <InitialiseContractSuccessfully status={setTestData} />,
-      <InitialiseContractInvalidMethod status={setTestData} />,
-      <InitialiseContractTwice status={setTestData} />,
-    ]
+      <DeployEmptyWasm key="deploy-empty-wasm" status={setTestData} />,
+      <DeployInvalidWasm key="deploy-invalid-wasm" status={setTestData} />,
+      <DeployContractWasm key="deploy-contract-wasm" status={setTestData} />,
+      <DeployWasmWithUserCancelWasm key="deploy-wasm-with-user-cancel-wasm" status={setTestData} />,
+      <DeployContractWasmWithInvalidPublicKey key="deploy-contract-wasm-with-invalid-public-key" status={setTestData} />,
+      <DeployContract key="deploy-contract" status={setTestData} />,
+      <DeployContractInvalidWasm key="deploy-contract-invalid-wasm" status={setTestData} />,
+      <DeployContractEmptyPublicKey key="deploy-contract-empty-public-key" status={setTestData} />,
+      <DeployContractEmptyWasm key="deploy-contract-empty-wasm" status={setTestData} />,
+      <GetContractData key="get-contract-data" status={setTestData} />,
+      <InitialiseContractSuccessfully key="initialise-contract-successfully" status={setTestData} />,
+      <InitialiseContractInvalidMethod key="initialise-contract-invalid-method" status={setTestData} />,
+      <InitialiseContractTwice key="initialise-contract-twice" status={setTestData} />,
+    ];
   }
 
   const TokenTests = () => {
     return [
-      <TokenDeploy status={setTestData} />,
-      <TokenDeployWithWasmId status={setTestData} />,
-      <TokenDeployAndInitialise status={setTestData} />
-    ]
+      <TokenDeploy key="token-deploy" status={setTestData} />,
+      <TokenDeployWithWasmId key="token-deploy-with-wasm-id" status={setTestData} />,
+      <TokenDeployAndInitialise key="token-deploy-and-initialise" status={setTestData} />
+    ];
   }
 
   return (
@@ -116,9 +116,9 @@ export default function Home() {
               <InfoIcon />
             </HoverCardTrigger>
             <HoverCardContent>
-              Note: This test is not comprehensive in scope and 
-              is intended solely for the purpose of testing UI 
-              and wallet interactions. To access the remaining 
+              Note: This test is not comprehensive in scope and
+              is intended solely for the purpose of testing UI
+              and wallet interactions. To access the remaining
               tests, please refer to the following location: {" "}
               <Link className="w-full underline text-blue-500" href="https://github.com/Sorosan/sorosan-sdk/tree/master/src/sdk/__tests__"
                 rel="noopener noreferrer" target="_blank">
